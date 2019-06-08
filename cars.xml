@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<warehouse type="array">
+<car>
+<id>1</id>
+<category>Sedan</category>
+<availability>Y</availability>
+<brand>Toyota</brand>
+<model>camry</model>
+<year>2013</year>
+<mileage>10000</mileage>
+<fuel_type>Petrol</fuel_type>
+<seat>5</seat>
+<price>$120</price>
+<description>The Camry comes with a 203-horsepower four-cylinder engine, an eight-speed automatic transmission, and front-wheel drive.</description>
+</car>
+<car>
+<id>2</id>
+<category>Sedan</category>
+<availability>Y</availability>
+<brand>Bmw</brand>
+<model>320i</model>
+<year>2015</year>
+<mileage>15300</mileage>
+<fuel_type>Petrol</fuel_type>
+<seat>5</seat>
+<price>$130</price>
+<description>A Sedan with impressive dynamics and low fuel consumption. A plug-in hybrid system that combines a 4-cylinder petrol engine.</description>
+</car>
+<car>
+<id>3</id>
+<category>Wagon</category>
+<availability>Y</availability>
+<brand>Holden</brand>
+<model>captiva</model>
+<year>2019</year>
+<mileage>10000</mileage>
+<fuel_type>Diesel</fuel_type>
+<seat>5</seat>
+<price>$120</price>
+<description>The Holden Captiva is a crossover SUV produced from 2006 to 2018 by GM Korea, previously known as Daewoo. </description>
+</car>
+<car>
+<id>4</id>
+<category>Suv</category>
+<availability>Y</availability>
+<brand>Jeep</brand>
+<model>cherokee</model>
+<year>2019</year>
+<mileage>10000</mileage>
+<fuel_type>Petrol</fuel_type>
+<seat>5</seat>
+<price>$90</price>
+<description>The Jeep Cherokee is a line of American vehicles sold by Jeep under various vehicle classes. The nameplate has been in use in some form since 1974.</description>
+</car>
+<car>
+<id>5</id>
+<category>Sedan</category>
+<availability>Y</availability>
+<brand>Honda</brand>
+<model>civic</model>
+<year>2016</year>
+<mileage>14000</mileage>
+<fuel_type>Petrol</fuel_type>
+<seat>5</seat>
+<price>$70</price>
+<description>The Honda Civic epitomizes compact-car excellence with its mix of practicality and a fun-to-drive personality for the ultimate experience. </description>
+</car>
+<car>
+<id>6</id>
+<category>Suv</category>
+<availability>Y</availability>
+<brand>Mercedes</brand>
+<model>glc</model>
+<year>2013</year>
+<mileage>11000</mileage>
+<fuel_type>petrol</fuel_type>
+<seat>5</seat>
+<price>$120</price>
+<description>From staid to adventurous – the Mercedes GLC is always the SUV you want it to be. With excellent comfort and outstanding quality.</description>
+</car>
+<car>
+<id>7</id>
+<category>sedan</category>
+<availability>Y</availability>
+<brand>Volkswagen</brand>
+<model>golf</model>
+<year>2015</year>
+<mileage>11000</mileage>
+<fuel_type>petrol</fuel_type>
+<seat>5</seat>
+<price>$110</price>
+<description>The Volkswagen Golf is a compact car produced by the German automotive manufacturer Volkswagen.</description>
+</car>
+<car>
+<id>8</id>
+<category>suv</category>
+<availability>N</availability>
+<brand>Suzuki</brand>
+<model>jimny</model>
+<year>2014</year>
+<mileage>10000</mileage>
+<fuel_type>petrol</fuel_type>
+<seat>4</seat>
+<price>$80</price>
+<description>Suzuki Jimny is a line of four-wheel drive off-road mini SUVs. Suzuki has sold 2.85 million of them in 194 countries from launch in April 1970.</description>
+</car>
+<car>
+<id>9</id>
+<category>sedan</category>
+<availability>N</availability>
+<brand>Hyundai</brand>
+<model>sonata</model>
+<year>2013</year>
+<mileage>134400</mileage>
+<fuel_type>petrol</fuel_type>
+<seat>5</seat>
+<price>$114</price>
+<description>A clean, modern design allows for class-leading interior space and comfort yet the fit and finish of the interior plastics are not up to Japanese standards.</description>
+</car>
+<car>
+<id>10</id>
+<category>suv</category>
+<availability>N</availability>
+<brand>Nissan</brand>
+<model>x-trail</model>
+<year>2013</year>
+<mileage>10000</mileage>
+<fuel_type>petrol</fuel_type>
+<seat>5</seat>
+<price>$100</price>
+<description>Front-engine; front-wheel, or four-wheel drive. The Nissan X-Trail is a compact crossover SUV produced by the Japanese automaker Nissan.</description>
+</car>
+</warehouse>

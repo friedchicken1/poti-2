@@ -1,0 +1,88 @@
+<head>
+<title>Warehouse</title>
+<link rel = "stylesheet" type = "text/css" href ="ware.css"/>
+</head>
+<body>
+
+<div class="navigation">
+  <h1> Tyrone's Car Warehouse </h1>
+  <button type="button" class="reservebtn" onclick="loadReserve()">Car Reservation</button>
+</div>
+  <br>
+  <div id="warehouse"></div>
+<button onclick="test()">Test1</button>
+
+<script src="ware.js"></script>
+<script>   
+var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+      }
+    };
+    xhttp.open("GET", "cars.xml", true);
+    xhttp.send();
+    
+    function myFunction(xml) {
+      var i;
+      var xmlDoc = xml.responseXML;
+      var div ="";
+      var x = xmlDoc.getElementsByTagName("car");
+      for (i = 0; i <x.length; i++) { 
+        var ava =x[i].getElementsByTagName("availability")[0].childNodes[0].nodeValue;
+        var addid =x[i].getElementsByTagName("id")[0].childNodes[0].nodeValue;
+        var addbrand =x[i].getElementsByTagName("brand")[0].childNodes[0].nodeValue;
+        var addmodel =x[i].getElementsByTagName("model")[0].childNodes[0].nodeValue;
+        var addyear =x[i].getElementsByTagName("year")[0].childNodes[0].nodeValue;
+        var addprice =x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
+
+        div += "<div class='row'>" +
+          "<div><img class='img' src='images/" +x[i].getElementsByTagName("model")[0].childNodes[0].nodeValue +".jpg'; alt='Not displaying properly'>" +
+          "</div><div><h3>" +x[i].getElementsByTagName("brand")[0].childNodes[0].nodeValue +" " +x[i].getElementsByTagName("model")[0].childNodes[0].nodeValue +" "+x[i].getElementsByTagName("year")[0].childNodes[0].nodeValue +
+          "</div><div><h4>Mileage: " +x[i].getElementsByTagName("mileage")[0].childNodes[0].nodeValue +
+          "</div><div><h4>Fuel Type: " +x[i].getElementsByTagName("fuel_type")[0].childNodes[0].nodeValue +
+          "</div><div><h4>Seats: " +x[i].getElementsByTagName("seat")[0].childNodes[0].nodeValue +
+          "</div><div><h4>Price Per Day: " +x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue +
+          "</div><div><h4>Description: " +x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue +
+          "</div><div>" +"<button type='button'; class='cartbtn'; onclick=addCart('"+ava+"','"+addid+"','"+addbrand+"','"+addmodel+"','"+addyear+"','"+addprice+"')>Add to Cart</button>" +
+          "</div></div>";
+      }
+      document.getElementById("warehouse").innerHTML = div;
+    
+
+    }
+function loadReserve() {
+  window.location.href='reserve.php';
+
+}
+
+function addCart(ava, addid, addbrand, addyear, addprice) {
+  if(ava == 'Y'){
+    alert("Added to cart successfully.");
+    $.ajax({
+      type:'post',
+      url:'storecart.php',
+      data:{
+        car_id:addid,
+        car_price:addprice,
+        car_brand: addbrand,
+        car_model: addmodel,
+        car_year: addyear
+      }
+    })
+
+  }
+  else if(ava == 'N'){
+    alert("Sorry, car is not currently available. Please try other cars.");
+  }
+  else{
+    alert("Not working currently.");
+  }
+}
+  
+function test(){
+  alert("Test worked");
+}
+  </script>
+</body>
+</html>
